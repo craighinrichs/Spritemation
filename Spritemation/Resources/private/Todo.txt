@@ -1,0 +1,27 @@
+
+Todo list
+
+Done  create cocos2d 2.0 project
+Done  navigation bar
+
+Done  create github repo
+
+*     UITable view
+1-2   pull images from dropbox
+2     drag images to center
+
+1     rotate images
+1     scale images
+1     skew images
+1     move images
+
+5     onion skinning
+
+5-10  time line fps setting
+5     ease in
+5     ease out
+
+5     tweening images
+
+20    saving files
+20    cocos2d integration

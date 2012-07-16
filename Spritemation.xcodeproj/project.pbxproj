@@ -401,6 +401,7 @@
 		9A39908515B3A08D0001F789 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		9A39908C15B3A2C40001F789 /* NavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavViewController.h; sourceTree = "<group>"; };
 		9A39908D15B3A2C40001F789 /* NavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavViewController.m; sourceTree = "<group>"; };
+		9A39909115B3A51C0001F789 /* Todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Todo.txt; path = Resources/private/Todo.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -459,6 +460,7 @@
 		9A398F0615B3A08A0001F789 /* Spritemation */ = {
 			isa = PBXGroup;
 			children = (
+				9A39909015B3A4F10001F789 /* Private */,
 				9A39907E15B3A08D0001F789 /* AppDelegate.h */,
 				9A39907F15B3A08D0001F789 /* AppDelegate.m */,
 				9A39908115B3A08D0001F789 /* HelloWorldLayer.h */,
@@ -843,6 +845,14 @@
 				9A39908D15B3A2C40001F789 /* NavViewController.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		9A39909015B3A4F10001F789 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				9A39909115B3A51C0001F789 /* Todo.txt */,
+			);
+			name = Private;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
