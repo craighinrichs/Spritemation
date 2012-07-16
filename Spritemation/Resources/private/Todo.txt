@@ -32,3 +32,4 @@ Ideas to add
 persistance
 create a new icon
 add icon
+figure out how you are going to handling pixel placement of pictures on iPad 3rd gen versus iPad 2
