@@ -21,6 +21,20 @@
 	// Create the main window
 	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
+    // Dropbox
+    
+    NSString* appKey = @"fj6on1xh8tu4ait";
+	NSString* appSecret = @"h04dsibyfclh1t3";
+	NSString *root = kDBRootAppFolder;
+    
+    DBSession* session = [[DBSession alloc] initWithAppKey:appKey appSecret:appSecret root:root];
+    
+	session.delegate = self; // DBSessionDelegate methods allow you to handle re-authenticating
+	[DBSession setSharedSession:session];
+    [session release];
+	
+	[DBRequest setNetworkRequestDelegate:self];
+    
 
 	// Create an CCGLView with a RGB565 color buffer, and a depth buffer of 0-bits
 	CCGLView *glView = [CCGLView viewWithFrame:[window_ bounds]
@@ -86,7 +100,7 @@
 	
 	// make main window visible
 	[window_ makeKeyAndVisible];
-	
+    
 	return YES;
 }
 
@@ -96,6 +110,17 @@
 	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    if ([[DBSession sharedSession] handleOpenURL:url]) {
+        if ([[DBSession sharedSession] isLinked]) {
+            NSLog(@"App linked successfully!");
+            // At this point you can start making API calls
+        }
+        return YES;
+    }
+    // Add whatever other url handling code your app requires here
+    return NO;
+}
 
 // getting a call, pause the game
 -(void) applicationWillResignActive:(UIApplication *)application
@@ -139,6 +164,48 @@
 -(void) applicationSignificantTimeChange:(UIApplication *)application
 {
 	[[CCDirector sharedDirector] setNextDeltaTimeZero:YES];
+}
+
+#pragma mark -
+#pragma mark DBSessionDelegate methods
+
+- (void)sessionDidReceiveAuthorizationFailure:(DBSession*)session userId:(NSString *)userId {
+	relinkUserId = [userId retain];
+	[[[[UIAlertView alloc] 
+	   initWithTitle:@"Dropbox Session Ended" message:@"Do you want to relink?" delegate:self 
+	   cancelButtonTitle:@"Cancel" otherButtonTitles:@"Relink", nil]
+	  autorelease]
+	 show];
+}
+
+#pragma mark -
+#pragma mark UIAlertViewDelegate methods
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)index {
+	if (index != alertView.cancelButtonIndex) {
+		[[DBSession sharedSession] linkUserId:relinkUserId fromController:navController_];
+	}
+	[relinkUserId release];
+	relinkUserId = nil;
+}
+
+#pragma mark -
+#pragma mark DBNetworkRequestDelegate methods
+
+static int outstandingRequests;
+
+- (void)networkRequestStarted {
+	outstandingRequests++;
+	if (outstandingRequests == 1) {
+		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+	}
+}
+
+- (void)networkRequestStopped {
+	outstandingRequests--;
+	if (outstandingRequests == 0) {
+		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+	}
 }
 
 - (void) dealloc

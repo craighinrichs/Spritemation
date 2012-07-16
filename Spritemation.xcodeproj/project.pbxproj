@@ -136,6 +136,8 @@
 		9A39908E15B3A2C40001F789 /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A39908D15B3A2C40001F789 /* NavViewController.m */; };
 		9A39909815B3AB840001F789 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A39909715B3AB840001F789 /* DropboxSDK.framework */; };
 		9A39909A15B3AB9E0001F789 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A39909915B3AB9E0001F789 /* Security.framework */; };
+		9A3990A115B3B47D0001F789 /* DropboxImagesScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3990A015B3B47D0001F789 /* DropboxImagesScrollView.m */; };
+		9A3990A815B3B5E90001F789 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3990A715B3B5E90001F789 /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -403,6 +405,10 @@
 		9A39909115B3A51C0001F789 /* Todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Todo.txt; path = Resources/private/Todo.txt; sourceTree = "<group>"; };
 		9A39909715B3AB840001F789 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 		9A39909915B3AB9E0001F789 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9A39909F15B3B47D0001F789 /* DropboxImagesScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxImagesScrollView.h; sourceTree = "<group>"; };
+		9A3990A015B3B47D0001F789 /* DropboxImagesScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxImagesScrollView.m; sourceTree = "<group>"; };
+		9A3990A615B3B5E90001F789 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		9A3990A715B3B5E90001F789 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -845,6 +851,10 @@
 			children = (
 				9A39908C15B3A2C40001F789 /* NavViewController.h */,
 				9A39908D15B3A2C40001F789 /* NavViewController.m */,
+				9A39909F15B3B47D0001F789 /* DropboxImagesScrollView.h */,
+				9A3990A015B3B47D0001F789 /* DropboxImagesScrollView.m */,
+				9A3990A615B3B5E90001F789 /* TestViewController.h */,
+				9A3990A715B3B5E90001F789 /* TestViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1035,6 +1045,8 @@
 				9A39908315B3A08D0001F789 /* HelloWorldLayer.m in Sources */,
 				9A39908615B3A08D0001F789 /* IntroLayer.m in Sources */,
 				9A39908E15B3A2C40001F789 /* NavViewController.m in Sources */,
+				9A3990A115B3B47D0001F789 /* DropboxImagesScrollView.m in Sources */,
+				9A3990A815B3B5E90001F789 /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

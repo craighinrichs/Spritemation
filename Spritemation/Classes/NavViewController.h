@@ -10,4 +10,5 @@
 
 @interface NavViewController : UINavigationController
 
+@property (nonatomic, retain) UIPopoverController *cont;
 @end
