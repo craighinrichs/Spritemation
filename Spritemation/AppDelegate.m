@@ -10,6 +10,7 @@
 
 #import "AppDelegate.h"
 #import "IntroLayer.h"
+#import "NavViewController.h"
 
 @implementation AppController
 
@@ -77,11 +78,10 @@
 
 	
 	// Create a Navigation Controller with the Director
-	navController_ = [[UINavigationController alloc] initWithRootViewController:director_];
-	navController_.navigationBarHidden = YES;
-	
+	navController_ = [[NavViewController alloc] initWithRootViewController:director_];
+	navController_.navigationBarHidden = NO;
+    director_.title = @"Spritemation";
 	// set the Navigation Controller as the root view controller
-//	[window_ addSubview:navController_.view];	// Generates flicker.
 	[window_ setRootViewController:navController_];
 	
 	// make main window visible
