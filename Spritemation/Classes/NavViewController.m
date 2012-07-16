@@ -7,6 +7,7 @@
 //
 
 #import "NavViewController.h"
+#import "cocos2d.h"
 
 @interface NavViewController ()
 
@@ -27,7 +28,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    UIBarButtonItem *addImages = [[UIBarButtonItem alloc] initWithTitle:@"Add Image" style:UIBarButtonItemStylePlain target:self action:@selector(addImage:)];
+    [CCDirector sharedDirector].navigationItem.leftBarButtonItem = addImages;
+    
+}
 
+- (void) addImage:(id) sender {
+    
 }
 
 - (void)didReceiveMemoryWarning

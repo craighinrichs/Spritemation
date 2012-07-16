@@ -134,6 +134,8 @@
 		9A39908315B3A08D0001F789 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A39908215B3A08D0001F789 /* HelloWorldLayer.m */; };
 		9A39908615B3A08D0001F789 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A39908515B3A08D0001F789 /* IntroLayer.m */; };
 		9A39908E15B3A2C40001F789 /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A39908D15B3A2C40001F789 /* NavViewController.m */; };
+		9A39909815B3AB840001F789 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A39909715B3AB840001F789 /* DropboxSDK.framework */; };
+		9A39909A15B3AB9E0001F789 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A39909915B3AB9E0001F789 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -402,6 +404,8 @@
 		9A39908C15B3A2C40001F789 /* NavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavViewController.h; sourceTree = "<group>"; };
 		9A39908D15B3A2C40001F789 /* NavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavViewController.m; sourceTree = "<group>"; };
 		9A39909115B3A51C0001F789 /* Todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Todo.txt; path = Resources/private/Todo.txt; sourceTree = "<group>"; };
+		9A39909715B3AB840001F789 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
+		9A39909915B3AB9E0001F789 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +413,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A39909A15B3AB9E0001F789 /* Security.framework in Frameworks */,
 				9A398EF515B3A08A0001F789 /* QuartzCore.framework in Frameworks */,
 				9A398EF715B3A08A0001F789 /* OpenGLES.framework in Frameworks */,
 				9A398EF915B3A08A0001F789 /* OpenAL.framework in Frameworks */,
@@ -418,6 +423,7 @@
 				9A398F0115B3A08A0001F789 /* Foundation.framework in Frameworks */,
 				9A398F0315B3A08A0001F789 /* CoreGraphics.framework in Frameworks */,
 				9A398F0515B3A08A0001F789 /* GameKit.framework in Frameworks */,
+				9A39909815B3AB840001F789 /* DropboxSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +450,8 @@
 		9A398EF315B3A08A0001F789 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A39909715B3AB840001F789 /* DropboxSDK.framework */,
+				9A39909915B3AB9E0001F789 /* Security.framework */,
 				9A398EF415B3A08A0001F789 /* QuartzCore.framework */,
 				9A398EF615B3A08A0001F789 /* OpenGLES.framework */,
 				9A398EF815B3A08A0001F789 /* OpenAL.framework */,
@@ -1084,6 +1092,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Spritemation/Prefix.pch;
@@ -1103,6 +1115,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Spritemation/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"Spritemation/libs/kazmath/include\"";

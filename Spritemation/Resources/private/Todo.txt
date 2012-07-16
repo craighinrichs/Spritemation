@@ -25,3 +25,10 @@ Done  create github repo
 
 20    saving files
 20    cocos2d integration
+
+
+Ideas to add
+
+persistance
+create a new icon
+add icon
