@@ -7,7 +7,9 @@ Done  navigation bar
 Done  create github repo
 
 *     UITable view
-1-2   pull images from dropbox
+Done   pull images from dropbox
+    Still more to do. 
+    Create a uitableview and put all the images in there and a button that adds them to the project
 2     drag images to center
 
 1     rotate images
@@ -29,7 +31,15 @@ Done  create github repo
 
 Ideas to add
 
+Create project or open project
+    Save projects to different folders
 persistance
 create a new icon
 add icon
 figure out how you are going to handling pixel placement of pictures on iPad 3rd gen versus iPad 2
+Moving something creates a key frame
+Options to copy or delete keyframe
+
+bind objects together - group
+
+zoom in

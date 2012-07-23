@@ -9,7 +9,7 @@
 #import "cocos2d.h"
 
 #import "AppDelegate.h"
-#import "IntroLayer.h"
+#import "AnimationBoardScene.h"
 #import "NavViewController.h"
 
 @implementation AppController
@@ -88,7 +88,7 @@
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
 
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-	[director_ pushScene: [IntroLayer scene]]; 
+	[director_ pushScene:[AnimationBoardScene node]];
 
 	
 	// Create a Navigation Controller with the Director

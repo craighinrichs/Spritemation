@@ -9,7 +9,7 @@
 #import "NavViewController.h"
 #import "cocos2d.h"
 #import <DropboxSDK/DropboxSDK.h>
-#import "TestViewController.h"
+#import "ImageSelectTableViewController.h"
 
 @interface NavViewController ()
 
@@ -43,8 +43,10 @@
         NSLog(@"Nope not linked");
 		[[DBSession sharedSession] linkFromController:self];
     } else {
-        TestViewController *test = [[TestViewController alloc] initWithNibName:nil bundle:nil];
+        //TestViewController *test = [[TestViewController alloc] initWithNibName:nil bundle:nil];
+        
         if(cont == nil) {
+            ImageSelectTableViewController *test = [[ImageSelectTableViewController alloc] initWithStyle:UITableViewStylePlain];
             cont = [[UIPopoverController alloc] initWithContentViewController:test];
         }
         [cont presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A34E06515B4FB0A00EB5386 /* AnimationBoardScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34E06415B4FB0A00EB5386 /* AnimationBoardScene.m */; };
+		9A34E06815B4FB1B00EB5386 /* AnimationBoardLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34E06715B4FB1B00EB5386 /* AnimationBoardLayer.m */; };
+		9A34E06B15B8EC9000EB5386 /* ImageSelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34E06A15B8EC9000EB5386 /* ImageSelectTableViewController.m */; };
 		9A398EF515B3A08A0001F789 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A398EF415B3A08A0001F789 /* QuartzCore.framework */; };
 		9A398EF715B3A08A0001F789 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A398EF615B3A08A0001F789 /* OpenGLES.framework */; };
 		9A398EF915B3A08A0001F789 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A398EF815B3A08A0001F789 /* OpenAL.framework */; };
@@ -131,16 +134,20 @@
 		9A39907815B3A08D0001F789 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A39907715B3A08D0001F789 /* vec4.c */; };
 		9A39907D15B3A08D0001F789 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A39907C15B3A08D0001F789 /* main.m */; };
 		9A39908015B3A08D0001F789 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A39907F15B3A08D0001F789 /* AppDelegate.m */; };
-		9A39908315B3A08D0001F789 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A39908215B3A08D0001F789 /* HelloWorldLayer.m */; };
-		9A39908615B3A08D0001F789 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A39908515B3A08D0001F789 /* IntroLayer.m */; };
 		9A39908E15B3A2C40001F789 /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A39908D15B3A2C40001F789 /* NavViewController.m */; };
 		9A39909815B3AB840001F789 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A39909715B3AB840001F789 /* DropboxSDK.framework */; };
 		9A39909A15B3AB9E0001F789 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A39909915B3AB9E0001F789 /* Security.framework */; };
 		9A3990A115B3B47D0001F789 /* DropboxImagesScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3990A015B3B47D0001F789 /* DropboxImagesScrollView.m */; };
-		9A3990A815B3B5E90001F789 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3990A715B3B5E90001F789 /* TestViewController.m */; };
+		9AD73AFF15BCA5A300FBB460 /* TouchableSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD73AFE15BCA4DA00FBB460 /* TouchableSprite.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A34E06315B4FB0A00EB5386 /* AnimationBoardScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationBoardScene.h; sourceTree = "<group>"; };
+		9A34E06415B4FB0A00EB5386 /* AnimationBoardScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationBoardScene.m; sourceTree = "<group>"; };
+		9A34E06615B4FB1B00EB5386 /* AnimationBoardLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationBoardLayer.h; sourceTree = "<group>"; };
+		9A34E06715B4FB1B00EB5386 /* AnimationBoardLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationBoardLayer.m; sourceTree = "<group>"; };
+		9A34E06915B8EC9000EB5386 /* ImageSelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSelectTableViewController.h; sourceTree = "<group>"; };
+		9A34E06A15B8EC9000EB5386 /* ImageSelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSelectTableViewController.m; sourceTree = "<group>"; };
 		9A398EF015B3A08A0001F789 /* Spritemation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spritemation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A398EF415B3A08A0001F789 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9A398EF615B3A08A0001F789 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -396,10 +403,6 @@
 		9A39907C15B3A08D0001F789 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A39907E15B3A08D0001F789 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9A39907F15B3A08D0001F789 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9A39908115B3A08D0001F789 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		9A39908215B3A08D0001F789 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		9A39908415B3A08D0001F789 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
-		9A39908515B3A08D0001F789 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		9A39908C15B3A2C40001F789 /* NavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavViewController.h; sourceTree = "<group>"; };
 		9A39908D15B3A2C40001F789 /* NavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavViewController.m; sourceTree = "<group>"; };
 		9A39909115B3A51C0001F789 /* Todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Todo.txt; path = Resources/private/Todo.txt; sourceTree = "<group>"; };
@@ -407,8 +410,9 @@
 		9A39909915B3AB9E0001F789 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9A39909F15B3B47D0001F789 /* DropboxImagesScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxImagesScrollView.h; sourceTree = "<group>"; };
 		9A3990A015B3B47D0001F789 /* DropboxImagesScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxImagesScrollView.m; sourceTree = "<group>"; };
-		9A3990A615B3B5E90001F789 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		9A3990A715B3B5E90001F789 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		9AD73AFB15BCA0D400FBB460 /* AnimationBoardDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationBoardDelegate.h; sourceTree = "<group>"; };
+		9AD73AFD15BCA4DA00FBB460 /* TouchableSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchableSprite.h; sourceTree = "<group>"; };
+		9AD73AFE15BCA4DA00FBB460 /* TouchableSprite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchableSprite.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -474,10 +478,6 @@
 				9A39909015B3A4F10001F789 /* Private */,
 				9A39907E15B3A08D0001F789 /* AppDelegate.h */,
 				9A39907F15B3A08D0001F789 /* AppDelegate.m */,
-				9A39908115B3A08D0001F789 /* HelloWorldLayer.h */,
-				9A39908215B3A08D0001F789 /* HelloWorldLayer.m */,
-				9A39908415B3A08D0001F789 /* IntroLayer.h */,
-				9A39908515B3A08D0001F789 /* IntroLayer.m */,
 				9A39908F15B3A2C90001F789 /* Classes */,
 				9A398F0715B3A08A0001F789 /* Resources */,
 				9A398F2115B3A08A0001F789 /* libs */,
@@ -853,8 +853,15 @@
 				9A39908D15B3A2C40001F789 /* NavViewController.m */,
 				9A39909F15B3B47D0001F789 /* DropboxImagesScrollView.h */,
 				9A3990A015B3B47D0001F789 /* DropboxImagesScrollView.m */,
-				9A3990A615B3B5E90001F789 /* TestViewController.h */,
-				9A3990A715B3B5E90001F789 /* TestViewController.m */,
+				9A34E06315B4FB0A00EB5386 /* AnimationBoardScene.h */,
+				9A34E06415B4FB0A00EB5386 /* AnimationBoardScene.m */,
+				9A34E06615B4FB1B00EB5386 /* AnimationBoardLayer.h */,
+				9A34E06715B4FB1B00EB5386 /* AnimationBoardLayer.m */,
+				9A34E06915B8EC9000EB5386 /* ImageSelectTableViewController.h */,
+				9A34E06A15B8EC9000EB5386 /* ImageSelectTableViewController.m */,
+				9AD73AFB15BCA0D400FBB460 /* AnimationBoardDelegate.h */,
+				9AD73AFD15BCA4DA00FBB460 /* TouchableSprite.h */,
+				9AD73AFE15BCA4DA00FBB460 /* TouchableSprite.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1042,11 +1049,12 @@
 				9A39907815B3A08D0001F789 /* vec4.c in Sources */,
 				9A39907D15B3A08D0001F789 /* main.m in Sources */,
 				9A39908015B3A08D0001F789 /* AppDelegate.m in Sources */,
-				9A39908315B3A08D0001F789 /* HelloWorldLayer.m in Sources */,
-				9A39908615B3A08D0001F789 /* IntroLayer.m in Sources */,
 				9A39908E15B3A2C40001F789 /* NavViewController.m in Sources */,
 				9A3990A115B3B47D0001F789 /* DropboxImagesScrollView.m in Sources */,
-				9A3990A815B3B5E90001F789 /* TestViewController.m in Sources */,
+				9A34E06515B4FB0A00EB5386 /* AnimationBoardScene.m in Sources */,
+				9A34E06815B4FB1B00EB5386 /* AnimationBoardLayer.m in Sources */,
+				9A34E06B15B8EC9000EB5386 /* ImageSelectTableViewController.m in Sources */,
+				9AD73AFF15BCA5A300FBB460 /* TouchableSprite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1160,6 +1168,7 @@
 				9A39908B15B3A08D0001F789 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
