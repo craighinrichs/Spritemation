@@ -11,7 +11,7 @@
 #import "AnimationBoardDelegate.h"
 #import "TouchableSprite.h"
 
-@interface AnimationBoardLayer : CCLayer<AnimationBoardDelegate> {
+@interface AnimationBoardLayer : CCLayer<AnimationBoardDelegate, UIGestureRecognizerDelegate> {
     TouchableSprite *currentSelectedSprite;
     CGPoint startlocation;
     UIRotationGestureRecognizer *rotate;

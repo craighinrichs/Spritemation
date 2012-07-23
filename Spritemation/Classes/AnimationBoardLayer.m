@@ -19,7 +19,8 @@
         pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
         [[CCDirector sharedDirector].view addGestureRecognizer:pinch];
         [pinch release];
-        
+        rotate.delegate = self;
+        pinch.delegate = self;
     }
     return self;
 }
@@ -58,7 +59,9 @@
     if(rotateRecog.state == UIGestureRecognizerStateBegan) {
         lastRotation = currentSelectedSprite.rotation;
     } else if(rotateRecog.state == UIGestureRecognizerStateChanged) {
-        currentSelectedSprite.rotation = CC_RADIANS_TO_DEGREES(rotateRecog.rotation) + lastRotation;
+        if(currentSelectedSprite.selected) {
+            currentSelectedSprite.rotation = CC_RADIANS_TO_DEGREES(rotateRecog.rotation) + lastRotation;
+        }
     }
 }
 
@@ -67,9 +70,15 @@
     if(pinchRecog.state == UIGestureRecognizerStateBegan) {
         lastScale = currentSelectedSprite.scale;
     } else if(pinchRecog.state == UIGestureRecognizerStateChanged) {
-        currentSelectedSprite.scale = pinchRecog.scale;
+        if(currentSelectedSprite.selected) {
+            currentSelectedSprite.scale = (pinchRecog.scale-1)+lastScale;
+        }
     }
     NSLog(@"Last scale %f  currentScale %f",lastScale,pinchRecog.scale);
+}
+
+- (BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
 }
 
 #pragma mark -
@@ -83,7 +92,6 @@
 - (BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     CGPoint location = [[CCDirector sharedDirector] convertToGL:[touch locationInView:touch.view]];
     startlocation = location;
-    NSLog(@"YEs");
     return YES;
 }
 
